@@ -6,6 +6,8 @@
 //
 
 import AppKit
+import LaunchAtLogin
+
 
 class StatusBarMenu: NSMenu {
     
@@ -87,7 +89,7 @@ class StatusBarMenu: NSMenu {
         // Launch at login
         let launchAtLoginItem = NSMenuItem(title: "Launch at login".localized, action: #selector(launchAtLoginClicked(menuItem:)), keyEquivalent: "")
         launchAtLoginItem.target = self
-        launchAtLoginItem.state = Preference.launchAtLogin ? .on : .off
+        launchAtLoginItem.state = LaunchAtLogin.isEnabled ? .on : .off
         addItem(launchAtLoginItem)
         
         // Unmount when menu
@@ -169,7 +171,7 @@ class StatusBarMenu: NSMenu {
     }
     
     @objc private func launchAtLoginClicked(menuItem: NSMenuItem) {
-        Preference.launchAtLogin = menuItem.state == .off ? true : false
+        LaunchAtLogin.isEnabled = menuItem.state == .off ? true : false
         updateMenu()
     }
     

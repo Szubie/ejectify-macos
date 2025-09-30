@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040024052E8C5FD500508773 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 040024042E8C5FD500508773 /* LaunchAtLogin */; };
 		B8006C05273E745900E7434F /* DAReturn+Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8006C04273E745900E7434F /* DAReturn+Message.swift */; };
 		B8006C07273E98F900E7434F /* DADissenter+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8006C06273E98F900E7434F /* DADissenter+Log.swift */; };
 		B82E12D32570FF0F004547C7 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E12D22570FF0F004547C7 /* Preference.swift */; };
-		B82E12D825710006004547C7 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = B82E12D725710006004547C7 /* LaunchAtLogin */; };
 		B89F412525AC9D7200E0B8C1 /* DADisk+DiskImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F412425AC9D7200E0B8C1 /* DADisk+DiskImage.swift */; };
 		B89F412B25AC9FD800E0B8C1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B89F412D25AC9FD800E0B8C1 /* Localizable.strings */; };
 		B89F413025ACA09700E0B8C1 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F412F25ACA09700E0B8C1 /* String+Localized.swift */; };
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B82E12D825710006004547C7 /* LaunchAtLogin in Frameworks */,
+				040024052E8C5FD500508773 /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +146,6 @@
 				B8AF59E12569569A003481A8 /* Sources */,
 				B8AF59E22569569A003481A8 /* Frameworks */,
 				B8AF59E32569569A003481A8 /* Resources */,
-				B82E12DA257100F9004547C7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -154,7 +153,7 @@
 			);
 			name = Ejectify;
 			packageProductDependencies = (
-				B82E12D725710006004547C7 /* LaunchAtLogin */,
+				040024042E8C5FD500508773 /* LaunchAtLogin */,
 			);
 			productName = Ejectify;
 			productReference = B8AF59E52569569A003481A8 /* Ejectify.app */;
@@ -196,7 +195,7 @@
 			);
 			mainGroup = B8AF59DC2569569A003481A8;
 			packageReferences = (
-				B82E12D625710006004547C7 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
+				040024032E8C5A3700508773 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
 			);
 			productRefGroup = B8AF59E62569569A003481A8 /* Products */;
 			projectDirPath = "";
@@ -219,27 +218,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B82E12DA257100F9004547C7 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B8AF59E12569569A003481A8 /* Sources */ = {
@@ -327,6 +305,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -390,6 +370,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -417,8 +399,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Ejectify/Ejectify.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 5;
 				DEAD_CODE_STRIPPING = YES;
@@ -431,6 +413,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.nielsmouthaan.Ejectify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,8 +427,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Ejectify/Ejectify.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 5;
 				DEAD_CODE_STRIPPING = YES;
@@ -458,6 +441,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.nielsmouthaan.Ejectify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -490,20 +474,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B82E12D625710006004547C7 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+		040024032E8C5A3700508773 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B82E12D725710006004547C7 /* LaunchAtLogin */ = {
+		040024042E8C5FD500508773 /* LaunchAtLogin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B82E12D625710006004547C7 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			package = 040024032E8C5A3700508773 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
 			productName = LaunchAtLogin;
 		};
 /* End XCSwiftPackageProductDependency section */

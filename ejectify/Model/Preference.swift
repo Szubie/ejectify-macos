@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import LaunchAtLogin
 
 class Preference {
     
@@ -15,15 +14,6 @@ class Preference {
         case screenIsLocked = "screenIsLocked"
         case screensStartedSleeping = "screensStartedSleeping"
         case systemStartsSleeping = "systemStartsSleeping"
-    }
-    
-    static var launchAtLogin: Bool {
-        get {
-            return LaunchAtLogin.isEnabled
-        }
-        set {
-            LaunchAtLogin.isEnabled = newValue
-        }
     }
     
     private static var userDefaultsKeyUnmountWhen = "preference.unmountWhen"
